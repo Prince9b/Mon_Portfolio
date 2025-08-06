@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  img{
+    max-width: 250px;
+    align-self: center;
+  }
+  a{
+    text-decoration: none;
+    transition: transform 200ms ease-in-out;
+    margin: 10px;
+  }
+  a:hover{
+    transform: scale(1.1);
+  }
+  
+  p{
+    max-width: 50ch;
+  }
+  
+}
+.projectsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+
+@media (width >= 800px){
+    .projectsContainer{
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    }
+}

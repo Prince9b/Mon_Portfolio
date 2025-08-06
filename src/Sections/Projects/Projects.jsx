@@ -1,0 +1,44 @@
+import styles from './ProjectsStyles.module.css'
+import carRental from '../../assets/carrental.svg'
+import ProjetCard from '../common/ProjetCard'
+import medsuj from '../../assets/medsuj.svg'
+import flutter from '../../assets/flutterproject.svg'
+import portfolio from '../../assets/portfolio.svg'
+
+function Projects() {
+  return (
+    <section id='projects' className={styles.container}>
+        <h1 className='sectionTitle'>Projets</h1>
+        <div className={styles.projectsContainer}>
+            <ProjetCard 
+                link={'https://github.com/Prince9b/Location_voiture'}
+                src={carRental}
+                h3={'NNP'}
+                p={'Site web de location de voiture réalisé en Laravel, PostgreSql et React Js'}
+            />
+            <ProjetCard 
+                link={'https://github.com/Prince9b/Location_voiture'}
+                src={medsuj}
+                h3={'MedSuj'}
+                p="App mobile qui recense les sujets et corrections réalisé en Express Js, MongoDb et React Native"
+
+            />
+            <ProjetCard 
+                link={'https://github.com/Prince9b/Location_voiture'}
+                src={flutter}
+                h3={'NetflixClone'}
+                p={'Clone de Netflix mobile réalisé en Flutter'}
+            />
+            <ProjetCard 
+                link={'https://github.com/Prince9b/Location_voiture'}
+                src={portfolio}
+                h3={'Portfolio'}
+                p={'Mon portfolio réalisé en React Js'}
+            />
+        </div>
+        
+    </section>
+  )
+}
+
+export default Projects

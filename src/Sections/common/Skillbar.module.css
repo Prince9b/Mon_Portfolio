@@ -1,0 +1,50 @@
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 300px;
+  margin-left: 70px;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.progressBar {
+  background-color: #ddd;
+  border-radius: 8px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.progressFill {
+  background-color: var(--btn-color);
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.5s ease-in-out;
+}
+
+.percent {
+  font-size: 14px;
+  color: var(--text-color);
+  text-align: right;
+}
+@media (width >= 800px){
+    .skill{
+        max-width: 600px;
+        margin-left: 400px;
+    }
+    .progressFill{
+        background-color: var(--btn-color);
+        height: 100%;
+        border-radius: 8px;
+        transition: width 0.5s ease-in-out;
+    }
+    .progressBar{
+        background-color: #ddd;
+        border-radius: 8px;
+        height: 20px;
+        overflow: hidden;
+    }
+}
