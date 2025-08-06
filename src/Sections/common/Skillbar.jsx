@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './SkillBar.module.css';
+import styles from './SkillBare.module.css';
 
 function SkillBar({ name, level }) {
   return (
