@@ -1,6 +1,6 @@
 import React from 'react';
 import SkillBar from '../common/Skillbar';
-import styles from '../common/SkillBar.module.css'
+import styles from './SkillsBar.module.css'
 
 const skillsLan = [
   { name: 'HTML / CSS / Javascript', level: 60 },
