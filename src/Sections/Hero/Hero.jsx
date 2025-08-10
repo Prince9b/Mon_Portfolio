@@ -29,18 +29,18 @@ function Hero() {
         </div>
         <div className={styles.info}>
             <h1> Prince <br />Natoyoum</h1>
-            <h2>Full Stack Developper Junior</h2>
+            <h2>Developper Junior</h2>
             <span>
-                <a href="https://" target='_target'>
+                <a href="" target='_target'>
                     <img src={linkedIcon} alt="" />
                 </a>
-                <a href="https://" target='_target'>
+                <a href="https://github.com/Prince9b/" target='_target'>
                     <img src={githubIcon} alt="" />
                 </a>
             </span>
             <p className={styles.description}>Passionné du developpement web et mobile</p>
             <a href={CV} download>
-                <button className='hover'>Resume</button>
+                <button className='hover'>CV</button>
             </a>
         </div>
     </section>
