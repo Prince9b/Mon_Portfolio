@@ -7,7 +7,6 @@ import githubIcon from '../../assets/github-light.svg'
 import linkedIcon from '../../assets/linkedin-light.svg'
 import CV from '../../assets/CV.pdf'
 import { useTheme } from '../common/ThemeContext'
-import Profil from '../../assets/Profil.jpg'
 
 
 function Hero() {
