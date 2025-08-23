@@ -30,7 +30,7 @@ function Hero() {
             <h1> Prince <br />Natoyoum</h1>
             <h2>Developper Junior</h2>
             <span>
-                <a href="www.linkedin.com/in/prince-natoyoum" target='_target'>
+                <a href="https://www.linkedin.com/in/prince-natoyoum/" target='_target'>
                     <img src={linkedIcon} alt="" />
                 </a>
                 <a href="https://github.com/Prince9b/" target='_target'>
