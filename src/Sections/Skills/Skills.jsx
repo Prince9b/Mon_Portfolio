@@ -3,22 +3,22 @@ import SkillBar from '../common/Skillbar';
 import styles from './SkillsBar.module.css'
 
 const skillsLan = [
-  { name: 'HTML / CSS / Javascript' },
-  { name: 'PHP'},
-  { name: 'Python' },
-  { name: 'Dart' },
-  { name: 'SQL' }
+  { name: 'HTML / CSS / Javascript', level: 60 },
+  { name: 'PHP', level: 60},
+  { name: 'Python', level: 50 },
+  { name: 'Dart', level: 30 },
+  { name: 'SQL', level: 60 }
 ];
 const skillsFra = [
-  { name: 'React Js' },
-  { name: 'React Native' },
-  { name: 'Laravel' },
-  {name: 'Django' },
-  { name: 'Express Js' },
-  { name: 'Flutter' },
-  { name: 'MySql' },
-  { name: 'PostgreSql' },
-  { name: 'Mongo DB' },
+  { name: 'React Js', level: 70 },
+  { name: 'React Native', level: 60 },
+  { name: 'Laravel', level: 70 },
+  { name: 'Django', level: 50 },
+  { name: 'Express Js', level: 50 },
+  { name: 'Flutter', level: 30 },
+  { name: 'MySql', level: 50 },
+  { name: 'PostgreSql', level: 50 },
+  { name: 'Mongo DB', level: 50 },
 ];
 
 function Skills() {
@@ -27,12 +27,12 @@ function Skills() {
       <h1 style={{textAlign:'center', marginBottom:'20px'}}>Compétences</h1>
       <h2 style={{textAlign:'center', marginBottom:'30px', margin:'20px'}}>Langages</h2>
       {skillsLan.map(skill => (
-        <SkillBar key={skill.name} name={skill.name} />
+        <SkillBar key={skill.name} name={skill.name} level={skill.level} />
       ))}
 
       <h2 style={{textAlign:'center', marginBottom:'30px', margin:'20px'}}>Frameworks et Bases de données</h2>
       {skillsFra.map(skill => (
-        <SkillBar key={skill.name} name={skill.name} />
+        <SkillBar key={skill.name} name={skill.name} level={skill.level} />
       ))}
 
     </section>
