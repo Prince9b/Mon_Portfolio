@@ -28,7 +28,7 @@ function Hero() {
         </div>
         <div className={styles.info}>
             <h1> Prince <br />Natoyoum</h1>
-            <h2>Developper Junior</h2>
+            <h2>Developper full Stack web et mobile Junior</h2>
             <span>
                 <a href="https://www.linkedin.com/in/prince-natoyoum/" target='_target'>
                     <img src={linkedIcon} alt="" />

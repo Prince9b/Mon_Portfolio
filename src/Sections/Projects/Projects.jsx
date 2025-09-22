@@ -35,6 +35,12 @@ function Projects() {
                 h3={'Portfolio'}
                 p={'Mon portfolio réalisé en React Js'}
             />
+            <ProjetCard
+                link={''}
+                src={''}
+                h3={'App de gestion de depenses'}
+                p={'Realise avec Django et React Js'}
+            />
         </div>
         
     </section>
