@@ -4,6 +4,7 @@ import ProjetCard from '../common/ProjetCard'
 import medsuj from '../../assets/medsuj.svg'
 import flutter from '../../assets/flutterproject.svg'
 import portfolio from '../../assets/portfolio.svg'
+import images from '../../assets/images.jpeg'
 
 function Projects() {
   return (
@@ -37,7 +38,7 @@ function Projects() {
             />
             <ProjetCard
                 link={''}
-                src={''}
+                src={'images'}
                 h3={'App de gestion de depenses'}
                 p={'Realise avec Django et React Js'}
             />
