@@ -39,7 +39,7 @@ function Hero() {
                 </a>
             </span>
             <p className={styles.description}>Passionné du developpement web et mobile</p>
-            <a href={Nato} download>
+            <a href={Nato} target='_blank'>
                 <button className='hover'>CV</button>
             </a>
         </div>
