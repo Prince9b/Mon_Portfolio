@@ -15,7 +15,13 @@ function Projects() {
                 link={'https://github.com/Prince9b/Location_voiture'}
                 src={carRental}
                 h3={'NNP'}
-                p={'Site web de location de voiture réalisé en Laravel, PostgreSql et React Js'}
+                p={'Application web de location de voiture réalisé en Laravel, PostgreSql et React Js'}
+            />
+            <ProjetCard 
+                link={'https://bamakolocation.netlify.app/'}
+                src={carRental}
+                h3={'LocV'}
+                p={'Site web vitrine de location de voiture réalisé avec React Js'}
             />
             <ProjetCard 
                 link={''}
