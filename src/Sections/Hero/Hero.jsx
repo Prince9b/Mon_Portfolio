@@ -7,6 +7,7 @@ import githubIcon from '../../assets/github-light.svg'
 import linkedIcon from '../../assets/linkedin-light.svg'
 import CV from '../../assets/CV.pdf'
 import { useTheme } from '../common/ThemeContext'
+import Nato from '../../assets/NatoyoumPrince.pdf'
 
 
 function Hero() {
@@ -28,7 +29,7 @@ function Hero() {
         </div>
         <div className={styles.info}>
             <h1> Prince <br />Natoyoum</h1>
-            <h2>Developper full Stack web et mobile Junior</h2>
+            <h2>Developper web et mobile Junior</h2>
             <span>
                 <a href="https://www.linkedin.com/in/prince-natoyoum/" target='_target'>
                     <img src={linkedIcon} alt="" />
@@ -38,7 +39,7 @@ function Hero() {
                 </a>
             </span>
             <p className={styles.description}>Passionné du developpement web et mobile</p>
-            <a href={CV} download>
+            <a href={Nato} download>
                 <button className='hover'>CV</button>
             </a>
         </div>

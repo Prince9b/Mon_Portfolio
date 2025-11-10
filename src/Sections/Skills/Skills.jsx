@@ -6,17 +6,12 @@ const skillsLan = [
   { name: 'HTML / CSS / Javascript', level: 60 },
   { name: 'PHP', level: 60},
   { name: 'Python', level: 50 },
-  { name: 'Dart', level: 30 },
-  { name: 'SQL', level: 60 }
 ];
 const skillsFra = [
   { name: 'React Js', level: 70 },
   { name: 'React Native', level: 60 },
   { name: 'Laravel', level: 70 },
   { name: 'Django', level: 50 },
-  { name: 'Express Js', level: 50 },
-  { name: 'Flutter', level: 30 },
-  { name: 'MySql', level: 50 },
   { name: 'PostgreSql', level: 50 },
   { name: 'Mongo DB', level: 50 },
 ];
