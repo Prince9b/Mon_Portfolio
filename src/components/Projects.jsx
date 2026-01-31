@@ -3,13 +3,14 @@ import carrental from "../assets/projects/Carrental.png";
 import finance from "../assets/projects/Financeapp.png";
 import cours from "../assets/projects/Courseapp.png";
 import portfolio from "../assets/projects/Portfolio.png";
+import money from '../assets/projects/money.png'
 import { div, span } from "motion/react-client";
 import { Github, View } from "lucide-react";
 import { motion } from "motion/react";
 
 const projects = [
   {
-    id: 1,
+    id: 4,
     title: "Location de voitures",
     description:
       "Application web qui permet la location des voitures muni d' une partie admin",
@@ -19,7 +20,7 @@ const projects = [
     image: carrental,
   },
   {
-    id: 2,
+    id: 3,
     title: "Location de voiture",
     description: "Site web vitrine pour la location de voitures",
     technologies: ["React", "Framer Motion"],
@@ -28,16 +29,7 @@ const projects = [
     image: carrental,
   },
   {
-    id: 3,
-    title: "Gestion de depenses",
-    description: "Application web qui permet de gerer les dépenses",
-    technologies: ["React", "Django", "PostgreSql"],
-    demoLink: "#",
-    repoLink: "https://github.com/Prince9b/DJANGO-REACT-T",
-    image: finance,
-  },
-  {
-    id: 4,
+    id: 5,
     title: "Sujet App",
     description:
       "Application mobile qui fournit les sujets et corrections des matieres d'une filiere",
@@ -47,7 +39,7 @@ const projects = [
     image: cours,
   },
   {
-    id: 5,
+    id: 2,
     title: "Portfolio",
     description:
       "Mon portfolio dynamique Mon portfolio dynamique Mon portfolio dynamique",
@@ -57,14 +49,15 @@ const projects = [
     image: portfolio,
   },
   {
-    id: 6,
-    title: "App de vente",
+    id: 1,
+    title: "ManageMoney",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae magni deser",
-    technologies: ["Python", "Flask", ""],
-    demoLink: "#",
-    repoLink: "#",
-    image: "",
+      "App web qui permet de gerer ses depenses",
+    technologies: ["Django Rest", "React", "TailwindCss"],
+    demoLink: "https://gestiondepenses.netlify.app/",
+    repoLink: "https://github.com/Prince9b/Backend_drf_gestionDepenses.git",
+    repoLink: 'https://github.com/Prince9b/Prince9b-frontendGestionDepense.git',
+    image: money,
   },
 ];
 
