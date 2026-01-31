@@ -3,40 +3,21 @@ import carrental from "../assets/projects/Carrental.png";
 import finance from "../assets/projects/Financeapp.png";
 import cours from "../assets/projects/Courseapp.png";
 import portfolio from "../assets/projects/Portfolio.png";
-import money from '../assets/projects/money.png'
+import money from "../assets/projects/money.png";
 import { div, span } from "motion/react-client";
 import { Github, View } from "lucide-react";
 import { motion } from "motion/react";
 
 const projects = [
   {
-    id: 4,
-    title: "Location de voitures",
-    description:
-      "Application web qui permet la location des voitures muni d' une partie admin",
-    technologies: ["React", "Laravel", "PostgreSql"],
-    demoLink: "https://locationvoiturebamako.netlify.app/",
-    repoLink: "https://github.com/Prince9b/Location_voiture",
-    image: carrental,
-  },
-  {
-    id: 3,
-    title: "Location de voiture",
-    description: "Site web vitrine pour la location de voitures",
-    technologies: ["React", "Framer Motion"],
-    demoLink: "https://bamakolocation.netlify.app/",
-    repoLink: "https://github.com/Prince9b/LocV",
-    image: carrental,
-  },
-  {
-    id: 5,
-    title: "Sujet App",
-    description:
-      "Application mobile qui fournit les sujets et corrections des matieres d'une filiere",
-    technologies: ["React Native", "Django", "MongoDB"],
-    demoLink: "#",
-    repoLink: "#",
-    image: cours,
+    id: 1,
+    title: "ManageMoney",
+    description: "App web qui permet de gerer ses depenses",
+    technologies: ["Django Rest", "React", "TailwindCss"],
+    demoLink: "https://gestiondepenses.netlify.app/",
+    repoLink: "https://github.com/Prince9b/Backend_drf_gestionDepenses.git",
+    /* repoLink: "https://github.com/Prince9b/Prince9b-frontendGestionDepense.git", */
+    image: money,
   },
   {
     id: 2,
@@ -49,15 +30,33 @@ const projects = [
     image: portfolio,
   },
   {
-    id: 1,
-    title: "ManageMoney",
+    id: 3,
+    title: "Location de voiture",
+    description: "Site web vitrine pour la location de voitures",
+    technologies: ["React", "Framer Motion"],
+    demoLink: "https://bamakolocation.netlify.app/",
+    repoLink: "https://github.com/Prince9b/LocV",
+    image: carrental,
+  },
+  {
+    id: 4,
+    title: "Location de voitures",
     description:
-      "App web qui permet de gerer ses depenses",
-    technologies: ["Django Rest", "React", "TailwindCss"],
-    demoLink: "https://gestiondepenses.netlify.app/",
-    repoLink: "https://github.com/Prince9b/Backend_drf_gestionDepenses.git",
-    repoLink: 'https://github.com/Prince9b/Prince9b-frontendGestionDepense.git',
-    image: money,
+      "Application web qui permet la location des voitures muni d' une partie admin",
+    technologies: ["React", "Laravel", "PostgreSql"],
+    demoLink: "https://locationvoiturebamako.netlify.app/",
+    repoLink: "https://github.com/Prince9b/Location_voiture",
+    image: carrental,
+  },
+  {
+    id: 5,
+    title: "Sujet App",
+    description:
+      "Application mobile qui fournit les sujets et corrections des matieres d'une filiere",
+    technologies: ["React Native", "Django", "MongoDB"],
+    demoLink: "#",
+    repoLink: "#",
+    image: cours,
   },
 ];
 
