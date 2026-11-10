@@ -2,6 +2,10 @@ import Title from "./Title";
 import { CalendarSync, LetterText, Paintbrush } from "lucide-react";
 import { motion as Motion } from "motion/react";
 import hero from "../assets/hero.png";
+import {
+  sectionRevealVariants,
+  sectionRevealViewport,
+} from "../lib/motion";
 
 function About() {
   const aboutSections = [
@@ -27,10 +31,10 @@ function About() {
   return (
     <Motion.div
       id="Apropos"
-      initial={{ y: 100, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ amount: 0.2 }}
+      initial="hidden"
+      whileInView="visible"
+      variants={sectionRevealVariants}
+      viewport={sectionRevealViewport}
       className="mx-auto max-w-7xl scroll-mt-24 px-5 py-20 sm:px-8 lg:py-28"
     >
       <Title title="À propos" />

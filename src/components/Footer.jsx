@@ -1,13 +1,17 @@
 import { Container, Github } from "lucide-react";
 import { motion as Motion } from "motion/react";
+import {
+  sectionRevealVariants,
+  sectionRevealViewport,
+} from "../lib/motion";
 
 function Footer() {
   return (
     <Motion.footer
-      initial={{ y: 40, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ amount: 0.2 }}
+      initial="hidden"
+      whileInView="visible"
+      variants={sectionRevealVariants}
+      viewport={sectionRevealViewport}
       className="border-t border-base-content/10 bg-base-200/40 px-5 py-10"
     >
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 sm:flex-row">

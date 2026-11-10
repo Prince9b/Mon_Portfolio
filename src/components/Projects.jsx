@@ -4,8 +4,18 @@ import cours from "../assets/projects/Courseapp.png";
 import portfolio from "../assets/projects/Portfolio.png";
 import money from "../assets/projects/money.png";
 import { createElement } from "react";
-import { Github, HandHeart, UsersRound, View } from "lucide-react";
+import {
+  Github,
+  HandHeart,
+  ShieldCheck,
+  UsersRound,
+  View,
+} from "lucide-react";
 import { motion as Motion } from "motion/react";
+import {
+  sectionRevealVariants,
+  sectionRevealViewport,
+} from "../lib/motion";
 
 const projects = [
   {
@@ -16,6 +26,16 @@ const projects = [
     demoLink: "https://gestiondepenses.netlify.app/",
     repoLink: "https://github.com/Prince9b/backendDevops.git",
     image: money,
+  },
+  {
+    id: 8,
+    title: "Authentification et autorisation",
+    description:
+      "Application web de gestion de l’authentification et des autorisations, avec vérification de compte par code envoyé par e-mail.",
+    technologies: ["Java", "Spring Boot", "Spring Security", "MySQL", "React"],
+    icon: ShieldCheck,
+    demoLink: "#",
+    repoLink: "#",
   },
   {
     id: 2,
@@ -77,6 +97,7 @@ const projects = [
     demoLink: "https://fondationjunior.netlify.app/",
     repoLink: "#",
   },
+  
 ];
 
 const Projects = () => {
@@ -84,10 +105,10 @@ const Projects = () => {
     <Motion.div
       id="Projets"
       className="scroll-mt-24 py-16 lg:py-24"
-      initial={{ y: 100, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ amount: 0.2 }}
+      initial="hidden"
+      whileInView="visible"
+      variants={sectionRevealVariants}
+      viewport={sectionRevealViewport}
     >
       <Title title="Projets" />
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">

@@ -3,6 +3,10 @@ import { motion as Motion } from "motion/react";
 import emailjs from "@emailjs/browser";
 import { Mail, Send } from "lucide-react";
 import Title from "./Title";
+import {
+  sectionRevealVariants,
+  sectionRevealViewport,
+} from "../lib/motion";
 
 const emailJsConfig = {
   serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -68,10 +72,10 @@ function Contact() {
     <Motion.section
       id="Contact"
       className="mx-auto max-w-7xl scroll-mt-24 px-5 py-20 sm:px-8 lg:py-28"
-      initial={{ y: 60, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
-      viewport={{ amount: 0.15, once: true }}
+      initial="hidden"
+      whileInView="visible"
+      variants={sectionRevealVariants}
+      viewport={sectionRevealViewport}
     >
       <Title title="Me contacter" />
       <div className="mx-auto grid max-w-5xl gap-10 rounded-3xl border border-base-content/10 bg-base-200/50 p-6 sm:p-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14 lg:p-12">

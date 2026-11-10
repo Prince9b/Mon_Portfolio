@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { MotionConfig } from "motion/react";
 import "./App.css";
 import About from "./components/About";
 import Competences from "./components/Competences";
@@ -26,7 +27,7 @@ const HeroSection44 = lazy(
 
 function App() {
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       <Navbar />
       <Suspense
         fallback={
@@ -67,7 +68,7 @@ function App() {
       </div>
       <Contact />
       <Footer />
-    </>
+    </MotionConfig>
   );
 }
 

@@ -7,6 +7,10 @@ import {
   Server,
   Workflow,
 } from "lucide-react";
+import {
+  sectionRevealVariants,
+  sectionRevealViewport,
+} from "../lib/motion";
 
 import imgCSS from "../assets/techno/css.png";
 import imgJS from "../assets/techno/js.png";
@@ -74,10 +78,10 @@ function Competences() {
     <Motion.div
       id="Competences"
       className="scroll-mt-24 py-20 lg:py-28"
-      initial={{ y: 100, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ amount: 0.2 }}
+      initial="hidden"
+      whileInView="visible"
+      variants={sectionRevealVariants}
+      viewport={sectionRevealViewport}
     >
       <Title title="Compétences" />
       <div className="grid gap-5 md:grid-cols-2">
