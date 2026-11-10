@@ -1,29 +1,27 @@
 import Title from "./Title";
 import carrental from "../assets/projects/Carrental.png";
-import finance from "../assets/projects/Financeapp.png";
 import cours from "../assets/projects/Courseapp.png";
 import portfolio from "../assets/projects/Portfolio.png";
 import money from "../assets/projects/money.png";
-import { div, span } from "motion/react-client";
-import { Github, View } from "lucide-react";
-import { motion } from "motion/react";
+import { createElement } from "react";
+import { Github, HandHeart, UsersRound, View } from "lucide-react";
+import { motion as Motion } from "motion/react";
 
 const projects = [
   {
     id: 1,
     title: "ManageMoney",
-    description: "App web qui permet de gerer ses depenses",
-    technologies: ["Django Rest", "React", "TailwindCss"],
+    description: "Application web de gestion et de suivi des dépenses.",
+    technologies: ["Django Rest", "React", "TailwindCss", "PostgreSql", "CI/CD"],
     demoLink: "https://gestiondepenses.netlify.app/",
-    repoLink: "https://github.com/Prince9b/Backend_drf_gestionDepenses.git",
-    /* repoLink: "https://github.com/Prince9b/Prince9b-frontendGestionDepense.git", */
+    repoLink: "https://github.com/Prince9b/backendDevops.git",
     image: money,
   },
   {
     id: 2,
     title: "Portfolio",
     description:
-      "Mon portfolio dynamique Mon portfolio dynamique Mon portfolio dynamique",
+      "Portfolio personnel présentant mes projets et mon parcours de développeur.",
     technologies: ["React", "TailwindCss"],
     demoLink: "https://portfoliopprince.netlify.app/",
     repoLink: "https://github.com/Prince9b/Mon_Portfolio",
@@ -37,12 +35,13 @@ const projects = [
     demoLink: "https://bamakolocation.netlify.app/",
     repoLink: "https://github.com/Prince9b/LocV",
     image: carrental,
+    repoLink: "#",
   },
   {
     id: 4,
     title: "Location de voitures",
     description:
-      "Application web qui permet la location des voitures muni d' une partie admin",
+      "Application de location de voitures avec un espace d'administration.",
     technologies: ["React", "Laravel", "PostgreSql"],
     demoLink: "https://locationvoiturebamako.netlify.app/",
     repoLink: "https://github.com/Prince9b/Location_voiture",
@@ -52,67 +51,111 @@ const projects = [
     id: 5,
     title: "Sujet App",
     description:
-      "Application mobile qui fournit les sujets et corrections des matieres d'une filiere",
-    technologies: ["React Native", "Django", "MongoDB"],
+      "Application mobile de consultation de sujets et de corrigés par filière.",
+    technologies: ["React Native", "Django Rest", "MongoDB"],
     demoLink: "#",
     repoLink: "#",
     image: cours,
+  },
+  {
+    id: 6,
+    title: "AJTDP",
+    description:
+      "Site web vitrine de l’Association Jeunesse Tchadienne pour le Développement Personnel, avec formulaire de contact et envoi d’e-mails.",
+    technologies: ["React Js", "TailwindCss"],
+    icon: UsersRound,
+    demoLink: "https://ajtdp.netlify.app/",
+    repoLink: "#",
+  },
+  {
+    id: 7,
+    title: "Fondation Junior du Tchad",
+    description:
+      "Site web vitrine de la Fondation Junior du Tchad, avec formulaire de contact et envoi d’e-mails.",
+    technologies: ["React Js", "TailwindCss"],
+    icon: HandHeart,
+    demoLink: "https://fondationjunior.netlify.app/",
+    repoLink: "#",
   },
 ];
 
 const Projects = () => {
   return (
-    <motion.div
+    <Motion.div
       id="Projets"
-      className="mt-20"
+      className="scroll-mt-24 py-16 lg:py-24"
       initial={{ y: 100, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
       viewport={{ amount: 0.2 }}
     >
       <Title title="Projets" />
-      <div className="grid md:grid-cols-3 gap-4">
+      <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {projects.map((projet) => (
           <div
             key={projet.id}
-            className="bg-base-300 p-5 h-fit rounded-xl shadow-lg"
+            className="group flex h-full flex-col overflow-hidden rounded-2xl border border-base-content/10 bg-base-200/60 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl"
           >
-            <img
-              src={projet.image}
-              alt={projet.title}
-              className="w-full rounded-xl h-56 object-cover"
-            />
-            <div>
-              <h1 className="my-2 font-bold">{projet.title}</h1>
-              <p className="text-sm">{projet.description}</p>
-            </div>
-            <div className="flex flex-wrap gap-2 my-3">
-              {projet.technologies.map((tech) => (
-                <span className="badge badge-accent badge-sm">{tech}</span>
-              ))}
-            </div>
-            <div>
-              <a
-                className="btn btn-accent w-1/3"
-                href={projet.demoLink}
-                target="_blank"
+            {projet.image ? (
+              <img
+                src={projet.image}
+                alt={projet.title}
+                className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+            ) : (
+              <div
+                aria-hidden="true"
+                className="flex h-52 items-center justify-center bg-gradient-to-br from-accent/20 via-base-200 to-base-300"
               >
-                Voir
-                <View className="w-3" />
-              </a>
-              <a
-                className="btn btn-neutral ml-2"
-                href={projet.repoLink}
-                target="_blank"
-              >
-                Github
-                <Github className="w-3" />
-              </a>
+                <span className="flex size-20 items-center justify-center rounded-3xl border border-base-content/10 bg-base-100/80 text-accent shadow-lg">
+                  {createElement(projet.icon, { className: "size-10" })}
+                </span>
+              </div>
+            )}
+            <div className="flex flex-1 flex-col p-5">
+              <h3 className="mb-2 text-lg font-semibold">{projet.title}</h3>
+              <p className="text-sm leading-6 text-base-content/65">
+                {projet.description}
+              </p>
+              <div className="my-4 flex flex-wrap gap-2">
+                {projet.technologies.map((tech) => (
+                  <span
+                    key={`${projet.id}-${tech}`}
+                    className="rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-xs font-medium text-base-content/80"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div className="mt-auto flex flex-wrap gap-2 pt-2">
+                {projet.demoLink !== "#" && (
+                  <a
+                    className="btn btn-sm rounded-full border-0 bg-accent text-accent-content hover:brightness-110"
+                    href={projet.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Voir le projet
+                    <View className="size-4" aria-hidden="true" />
+                  </a>
+                )}
+                {projet.repoLink !== "#" && (
+                  <a
+                    className="btn btn-sm rounded-full border-base-content/15 bg-transparent"
+                    href={projet.repoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                    <Github className="size-4" aria-hidden="true" />
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}
       </div>
-    </motion.div>
+    </Motion.div>
   );
 };
 

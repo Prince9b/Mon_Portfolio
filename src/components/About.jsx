@@ -1,8 +1,7 @@
-import React from "react";
 import Title from "./Title";
 import { CalendarSync, LetterText, Paintbrush } from "lucide-react";
-import { motion } from "motion/react";
-import hero from '../assets/hero.png'
+import { motion as Motion } from "motion/react";
+import hero from "../assets/hero.png";
 
 function About() {
   const aboutSections = [
@@ -26,35 +25,54 @@ function About() {
     },
   ];
   return (
-    <motion.div
+    <Motion.div
       id="Apropos"
       initial={{ y: 100, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
       viewport={{ amount: 0.2 }}
-      className="bg-base-300 p-10 mb-10 md:mb-32"
+      className="mx-auto max-w-7xl scroll-mt-24 px-5 py-20 sm:px-8 lg:py-28"
     >
-      <Title title="A propos" />
-      <div className="md:h-screen flex justify-center items-center">
-        <div className="hidden md:block">
-          <img src={hero} alt="" className="w-96 h-96 object-cover rounded-xl blur-sm" />
+      <Title title="À propos" />
+      <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="relative mx-auto w-full max-w-sm">
+          <div
+            className="absolute -inset-3 rotate-3 rounded-[2rem] bg-accent/20"
+            aria-hidden="true"
+          />
+          <img
+            src={hero}
+            alt="Portrait illustré de Prince Nato"
+            className="relative aspect-[4/3] w-full rounded-[1.75rem] border border-base-content/10 bg-base-200 object-cover object-top shadow-xl"
+          />
         </div>
-        <div className="md:ml-4 space-y-4">
-          {aboutSections.map((section) => (
-            <div
-              key={section.id}
-              className="flex flex-col md:flex-row items-center bg-base-100 p-5 rounded-xl md:w-96"
-            >
-              <div className="mb-2 md:mb-0">{section.icon}</div>
-              <div className="md:ml-4 text-center md:text-left">
-                <h2 className="text-xl font-bold mb-1">{section.title}</h2>
-                <p className="text-sm">{section.description}</p>
+        <div>
+          <p className="mb-7 text-center text-base leading-7 text-base-content/70 md:text-lg lg:text-left">
+            Je conçois et développe des expériences numériques, du web au
+            mobile. J’aime transformer des idées en produits accessibles,
+            performants et agréables à utiliser.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+            {aboutSections.map((section) => (
+              <div
+                key={section.id}
+                className="flex flex-col items-center gap-4 rounded-2xl border border-base-content/10 bg-base-200/60 p-5 transition-colors hover:border-accent/40 sm:flex-row lg:max-w-xl"
+              >
+                <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-accent/10">
+                  {section.icon}
+                </div>
+                <div className="text-center sm:text-left">
+                  <h3 className="mb-1 font-semibold">{section.title}</h3>
+                  <p className="text-sm text-base-content/65">
+                    {section.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </motion.div>
+    </Motion.div>
   );
 }
 

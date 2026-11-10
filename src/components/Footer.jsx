@@ -1,29 +1,36 @@
-import { Container, Github, Linkedin } from "lucide-react";
-import React from "react";
-import {motion} from 'motion/react'
+import { Container, Github } from "lucide-react";
+import { motion as Motion } from "motion/react";
 
 function Footer() {
   return (
-    <motion.footer initial={{ y: 100, opacity: 0 }}        // Position de départ
-      whileInView={{ y: 0, opacity: 1 }}       // Position finale
+    <Motion.footer
+      initial={{ y: 40, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ amount: 0.2 }} className="footer footer-horizontal footer-center  p-10">
-      <aside>
-        <Container className='w-15 h-15' />
-           
-        <p className="font-bold">
-           P
-            <span className='text-accent'>DEV</span>
-        </p>
-        <p>Copyright © {new Date().getFullYear()} - Tous les droits sont reserves</p>
-      </aside>
-      <nav>
-        <div className="grid grid-flow-col gap-4">
-          <a href="https://github.com/Prince9b" target="_blank"><Github/></a>
-          <a href="" target="_blank"><Linkedin/></a>
+      viewport={{ amount: 0.2 }}
+      className="border-t border-base-content/10 bg-base-200/40 px-5 py-10"
+    >
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 sm:flex-row">
+        <div className="flex flex-col items-center gap-2 sm:items-start">
+          <a href="#Home" className="flex items-center gap-2 font-bold">
+            <Container className="size-5 text-accent" aria-hidden="true" />P
+            <span className="text-accent">DEV</span>
+          </a>
+          <p className="text-sm text-base-content/60">
+            © {new Date().getFullYear()} Prince Nato. Tous droits réservés.
+          </p>
         </div>
-      </nav>
-    </motion.footer>
+        <a
+          href="https://github.com/Prince9b"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub de Prince Nato"
+          className="flex size-10 items-center justify-center rounded-full border border-base-content/10 transition-colors hover:border-accent/50 hover:bg-accent/10"
+        >
+          <Github className="size-5" aria-hidden="true" />
+        </a>
+      </div>
+    </Motion.footer>
   );
 }
 
